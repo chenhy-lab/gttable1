@@ -38,7 +38,6 @@ tmp <- gttable1(data=pbc,cont_var=cont_var,out_format='gtobj',pDigits=3,method='
 tmp <- gttable1(data=pbc,cat_var=cat_var,out_format='gtobj',pDigits=3,method='define')
 tmp <- gttable1(data=pbc,out_format='dataframe',pDigits=3,method='define')
 tmp <- gttable1(data=pbc,out_format='gtobj',pDigits=3,method='define')
-gttable1(data=tmp,out_format='tibble',pDigits=3,method='define')
 ```
 
 
