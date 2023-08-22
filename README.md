@@ -1,4 +1,4 @@
-# gttable1:Make table1 in R<img src="inst/figures/imgfile.png" align="right" height="138"/>
+# Make table1 in R<img src="inst/figures/imgfile.png" align="right" height="138"/>
 
 ## :writing_hand: Author
 
