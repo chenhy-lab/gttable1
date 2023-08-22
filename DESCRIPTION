@@ -1,0 +1,21 @@
+Package: gttable1
+Type: Package
+Title: Make table1, version 0.1.
+Version: 0.1.0
+Date: 2023-08-21
+Authors@R: person('Huiyao', 'Chen', email = 'huiyaochen@foxmail.com', role = c('aut', 'cre'))
+Maintainer@R: person('Huiyao', 'Chen', email = 'huiyaochen@foxmail.com')
+Description: "gttable1" is a package for making table1.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends:
+  R (>= 3.6.0),
+  dplyr (>= 1.1.2),
+  tidyselect (>= 1.1.1),
+  gtsummary (>= 1.7.0),
+  car (>= 3.1-2)
+Imports:
+Suggests:
+RoxygenNote: 7.2.3
+
