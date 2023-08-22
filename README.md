@@ -1,4 +1,4 @@
-# gttable1:Easier to make table1 based on gtsummary in R<img src="inst/figures/imgfile.png" align="right" height="138"/>
+# gttable1:Make table1 in R<img src="inst/figures/imgfile.png" align="right" height="138"/>
 
 ## :writing_hand: Author
 
@@ -16,6 +16,12 @@ remotes::install_github("chenhy-lab/gttable1")
 ```
 
 ------------------------------------------------------------------------
+### Input
+<img src="inst/figures/input.png" align="left" height="200"/>
+
+### Output
+<img src="inst/figures/output.png" align="left" height="400"/>
+
 
 ### Demo script
 
