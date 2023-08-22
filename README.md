@@ -18,13 +18,11 @@ remotes::install_github("chenhy-lab/gttable1")
 ------------------------------------------------------------------------
 ## Input
 
-<img src="inst/figures/input.png" align="left" height="200"/>
-
-------------------------------------------------------------------------
+<img src="inst/figures/input.png" align="middle" height="200" width="400"/>
 
 ## Output
 
-<img src="inst/figures/output.png" align="left" height="400"/>
+<img src="inst/figures/output.png" align="middle" height="400"/>
 
 ------------------------------------------------------------------------
 
