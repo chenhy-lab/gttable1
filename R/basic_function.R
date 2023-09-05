@@ -150,7 +150,7 @@ check_option <- function(para_name,option_list,envir){
 
 
 
-.gt_auto <- function(data=NULL,group_var=NULL,cat_var=NULL,cont_var=NULL,out_format='gtobj',digits=digits,pDigits=pDigits){
+.gt_auto <- function(data=NULL,group_var=NULL,cat_var=NULL,cont_var=NULL,out_format='gtobj',digits=digits,pDigits=pDigits,missing=missing){
   cat_var_type <- cont_var_type <- NULL
   
   if(!is.null(cat_var) && length(cat_var)>0){
@@ -166,7 +166,7 @@ check_option <- function(para_name,option_list,envir){
                   statistic = gtsummary::all_continuous() ~ c("{mean} ({sd})",
                                                    "{median} ({p25}, {p75})",
                                                    "{min}, {max}"),  
-                  missing="always",
+                  missing=missing,
                   missing_text='missing',
                   digits = gtsummary::all_continuous() ~ digits)
   }else{
@@ -176,7 +176,7 @@ check_option <- function(para_name,option_list,envir){
                   statistic = gtsummary::all_continuous() ~ c("{mean} ({sd})",
                                                    "{median} ({p25}, {p75})",
                                                    "{min}, {max}"),  
-                  missing="always",
+                  missing=missing,
                   missing_text='missing',
                   digits = gtsummary::all_continuous() ~ digits) %>%
       gtsummary::add_overall() %>%
@@ -196,7 +196,7 @@ check_option <- function(para_name,option_list,envir){
 
 
 
-.gt_define <- function(data=NULL,group_var=NULL,cat_var=NULL,cont_var=NULL,out_format='gtobj',digits=digits,pDigits=pDigits){
+.gt_define <- function(data=NULL,group_var=NULL,cat_var=NULL,cont_var=NULL,out_format='gtobj',digits=digits,pDigits=pDigits,missing=missing){
   cat_var_type <- test_list_cat <- cont_var_type <- test_list_cont <- args_list <- NULL
   
   if(!is.null(cat_var) && length(cat_var)>0){
@@ -212,7 +212,7 @@ check_option <- function(para_name,option_list,envir){
                   statistic = gtsummary::all_continuous() ~ c("{mean} ({sd})",
                                                                "{median} ({p25}, {p75})",
                                                                "{min}, {max}"),  
-                  missing="always",
+                  missing=missing,
                   missing_text='missing',
                   digits = gtsummary::all_continuous() ~ digits)
   }else{
@@ -227,7 +227,7 @@ check_option <- function(para_name,option_list,envir){
                   statistic = gtsummary::all_continuous() ~ c("{mean} ({sd})",
                                                    "{median} ({p25}, {p75})",
                                                    "{min}, {max}"),  
-                  missing="always",
+                  missing=missing,
                   missing_text='missing',
                   digits = gtsummary::all_continuous() ~ digits) %>%
       gtsummary::add_overall() %>%

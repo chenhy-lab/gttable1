@@ -25,13 +25,13 @@
 #' cont_var <- c("bili","chol","copper","alk.phos","trig")
 #' cat_var <- c("sex","status","stage")
 #' group_var <- "trt"
-#' gttable1(data=pbc,out_format='dataframe',pDigits=3,method='auto')
-#' gttable1(data=pbc,cat_var=cat_var,out_format='gtobj',pDigits=3,method='define')
-#' gttable1(data=pbc,group_var=group_var,cat_var=cat_var,cont_var=cont_var,out_format='gtobj',pDigits=3,method='auto')
+#' gttable1(data=pbc,out_format="dataframe",pDigits=3,method="auto")
+#' gttable1(data=pbc,cat_var=cat_var,out_format="gtobj",pDigits=3,method="define")
+#' gttable1(data=pbc,group_var=group_var,cat_var=cat_var,cont_var=cont_var,out_format="gtobj",pDigits=3,method="auto",missing="ifany")
 #' 
 #' @export
 gttable1 <- function(data=NULL,group_var=NULL,cat_var=NULL,cont_var=NULL,
-                              out_format='gtobj',digits=2,pDigits=3,method='auto'){
+                              out_format="gtobj",digits=2,pDigits=3,method="auto",missing="ifany"){
   ## Check parameters
   all_input_para <- c('data')
   check_res <- sapply(all_input_para,function(x)check_para(x,envir=environment()))
@@ -63,10 +63,10 @@ gttable1 <- function(data=NULL,group_var=NULL,cat_var=NULL,cont_var=NULL,
   
   if(is.null(group_var) || group_var %in% colnames(data)){
     if(method=='auto'){
-      stat_res <- .gt_auto(data=data,group_var=group_var,cat_var=cat_var,cont_var=cont_var,out_format=out_format,digits=digits,pDigits=pDigits)
+      stat_res <- .gt_auto(data=data,group_var=group_var,cat_var=cat_var,cont_var=cont_var,out_format=out_format,digits=digits,pDigits=pDigits,missing=missing)
     }
     if(method=='define'){
-      stat_res <- .gt_define(data=data,group_var=group_var,cat_var=cat_var,cont_var=cont_var,out_format=out_format,digits=digits,pDigits=pDigits)
+      stat_res <- .gt_define(data=data,group_var=group_var,cat_var=cat_var,cont_var=cont_var,out_format=out_format,digits=digits,pDigits=pDigits,missing=missing)
     }
   }else{
     cat("Please check whether the group variable is a column name in the data!\n")
