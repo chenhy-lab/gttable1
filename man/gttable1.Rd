@@ -12,7 +12,8 @@ gttable1(
   out_format = "gtobj",
   digits = 2,
   pDigits = 3,
-  method = "auto"
+  method = "auto",
+  ...
 )
 }
 \arguments{
@@ -37,6 +38,8 @@ If NULL, all continuous variables will be calculated.}
 \item{method}{character, methods for gttable1 (e.g. "auto","define"). Default is "auto".
 auto : equal to gtsummary package; define : automatically choose appropriate statistical methods 
 according to normality and homogeneity of variance.}
+
+\item{...}{reference gtsummary::tbl_summary.}
 }
 \value{
 Return a gt object or dataframe.
@@ -49,8 +52,9 @@ data(pbc, package = "survival")
 cont_var <- c("bili","chol","copper","alk.phos","trig")
 cat_var <- c("sex","status","stage")
 group_var <- "trt"
-gttable1(data=pbc,out_format='dataframe',pDigits=3,method='auto')
-gttable1(data=pbc,cat_var=cat_var,out_format='gtobj',pDigits=3,method='define')
-gttable1(data=pbc,group_var=group_var,cat_var=cat_var,cont_var=cont_var,out_format='gtobj',pDigits=3,method='auto')
+gttable1(data=pbc,out_format="dataframe",pDigits=3,method="auto")
+gttable1(data=pbc,cat_var=cat_var,out_format="gtobj",pDigits=3,method="define")
+gttable1(data=pbc,group_var=group_var,cat_var=cat_var,cont_var=cont_var,out_format="gtobj",pDigits=3,method="auto")
+gttable1(data=pbc,group_var=group_var,cat_var=cat_var,cont_var=cont_var,out_format="gtobj",pDigits=3,method="auto",missing="always")
 
 }
