@@ -31,9 +31,9 @@ remotes::install_github("chenhy-lab/gttable1")
 ``` r
 library(gttable1)
 data(pbc, package = "survival")
-cont_var <- c("bili","chol","copper","alk.phos","trig")
-cat_var <- c("sex","status","stage")
-group_var <- "trt"
+cont_var <- c("bili","chol","copper","alk.phos","trig") # continuous variables
+cat_var <- c("sex","status","stage") # category variables
+group_var <- "trt" # group variable
 tmp <- gttable1(data=pbc,group_var=group_var,cat_var=cat_var,cont_var=cont_var,out_format='gtobj',pDigits=3,method='auto')
 tmp <- gttable1(data=pbc,group_var=group_var,cat_var=NULL,cont_var=cont_var,out_format='dataframe',pDigits=3,method='auto')
 tmp <- gttable1(data=pbc,cont_var=cont_var,out_format='gtobj',pDigits=3,method='auto')
