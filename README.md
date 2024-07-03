@@ -11,7 +11,7 @@ Huiyao Chen
 Install the gttable1 package via the Github repository:
 
 ``` r
-# install.package("remotes")   #In case you have not installed it.
+# install.packages("remotes")   #In case you have not installed it.
 remotes::install_github("chenhy-lab/gttable1")
 ```
 
